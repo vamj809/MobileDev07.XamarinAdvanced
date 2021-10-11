@@ -18,6 +18,7 @@ namespace MobileDev07.XamarinAdvanced
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
+            containerRegistry.RegisterForNavigation<AndroidNavigationPage>();
             containerRegistry.RegisterForNavigation<HomePage, HomeViewModel>();
             containerRegistry.Register<IDeviceOrientationService>();
         }
@@ -25,7 +26,7 @@ namespace MobileDev07.XamarinAdvanced
         protected override void OnInitialized()
         {
             InitializeComponent();
-            NavigationService.NavigateAsync($"{NavigationConstants.HomePage}");
+            NavigationService.NavigateAsync($"{NavigationConstants.NavigationPage}/{NavigationConstants.HomePage}");
         }
     }
 }
