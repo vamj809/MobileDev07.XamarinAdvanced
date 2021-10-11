@@ -15,4 +15,4 @@ Various entries to show the main differences between an original entry, a custom
 Finally, we show a ImageButton with Drop Shadow and a NavigationBar with increased Height.
 
 ![Alt text](Evidences/PlatformSpecifics.png?raw=true "Platform Specifics")
-![Alt text]("Evidences/PlatformSpecificsV2.png?raw=true" "Platform Specifics 2")
+![Alt text](Evidences/PlatformSpecificsV2.png?raw=true "Platform Specifics 2")
