@@ -25,7 +25,7 @@ namespace MobileDev07.XamarinAdvanced
         protected override void OnInitialized()
         {
             InitializeComponent();
-            NavigationService.NavigateAsync($"{NavigationConstants.HomePage}");
+            NavigationService.NavigateAsync($"{NavigationConstants.NavigationPage} / {NavigationConstants.HomePage}");
         }
     }
 }
