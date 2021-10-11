@@ -12,11 +12,8 @@ namespace MobileDev07.XamarinAdvanced.Controls
 
         public bool HasColor
         {
-            get { return (bool)GetValue(HasColorProperty); }
-            set
-            {
-                SetValue(HasColorProperty, value);
-            }
+            get => (bool)GetValue(HasColorProperty);
+            set => SetValue(HasColorProperty, value);
         }
     }
 }
