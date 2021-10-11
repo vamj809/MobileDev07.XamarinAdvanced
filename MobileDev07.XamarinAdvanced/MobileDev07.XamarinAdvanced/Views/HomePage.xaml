@@ -4,6 +4,7 @@
              xmlns:viewmodels="clr-namespace:MobileDev07.XamarinAdvanced.ViewModels"
              xmlns:controls="clr-namespace:MobileDev07.XamarinAdvanced.Controls"
              xmlns:effects="clr-namespace:MobileDev07.XamarinAdvanced.Effects"
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
              x:DataType="viewmodels:HomeViewModel"
              x:Class="MobileDev07.XamarinAdvanced.Views.HomePage">
     <ContentPage.Content>
@@ -28,19 +29,26 @@
                 </Entry.Effects>
             </Entry>
 
-            <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
-            <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-            
-            <Label FontSize="16" Padding="30,24,30,0">
-                <Label.FormattedText>
-                    <FormattedString>
-                        <FormattedString.Spans>
-                            <Span Text="Learn more at "/>
-                            <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                        </FormattedString.Spans>
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
+            <ImageButton 
+                Source="PizzaIcon"
+                BackgroundColor="GhostWhite"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                HeightRequest="100"
+                WidthRequest="100"
+                android:ImageButton.IsShadowEnabled="true"
+                android:ImageButton.ShadowColor="Gray"
+                android:ImageButton.ShadowRadius="12">
+                <android:ImageButton.ShadowOffset>
+                    <Size>
+                        <x:Arguments>
+                            <x:Double>10</x:Double>
+                            <x:Double>10</x:Double>
+                        </x:Arguments>
+                    </Size>
+                </android:ImageButton.ShadowOffset>
+            </ImageButton>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
