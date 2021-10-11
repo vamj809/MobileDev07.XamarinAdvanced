@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:viewmodels="clr-namespace:MobileDev07.XamarinAdvanced.ViewModels"
              xmlns:controls="clr-namespace:MobileDev07.XamarinAdvanced.Controls"
+             xmlns:effects="clr-namespace:MobileDev07.XamarinAdvanced.Effects"
              x:DataType="viewmodels:HomeViewModel"
              x:Class="MobileDev07.XamarinAdvanced.Views.HomePage">
     <ContentPage.Content>
@@ -19,6 +20,13 @@
             <Entry x:Name="inputEntry" Placeholder="Original Entry"/>
             <controls:CustomEntry Placeholder="Custom Entry" HasColor="{Binding Source={x:Reference enableColorSwitch}, Path=IsToggled}"/>
             <Switch x:Name="enableColorSwitch"/>
+
+            <Label Text="Focused Effect" FontSize="Title"/>
+            <Entry Placeholder="Entry says: Focus on me!">
+                <Entry.Effects>
+                    <effects:FocusEffect/>
+                </Entry.Effects>
+            </Entry>
 
             <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
             <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
